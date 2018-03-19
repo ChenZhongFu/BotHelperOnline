@@ -15,10 +15,13 @@ online_models = ModelInfo.objects.filter(~Q(online_url=''),is_online=1)
 for info in online_models:
     m_key = 'classify'
     m_key += str(info.app_id)
+    path =DIR+m_key+'.h5'
     model_dic[m_key] = load_model(info.online_url)
     model_dic[m_key].predict(np.zeros((1, 100)))
-    os.rename(info.online_url,DIR+m_key+'.h5')
-    info.update(online_url='DIR+m_key'+'.h5',is_replace=1)
+    if os.path.exists(path):
+        os.remove(path)
+    os.rename(info.online_url,path)
+    info.update(online_url=path,is_replace=0)
 
 with open(DIR+'word_index.pkl', 'rb') as vocab:
     model_dic['word_index'] = pickle.load(vocab)
@@ -36,7 +39,12 @@ def cron_load():
             model_dic[m_key]=load_model(info.online_url)
         else:
             model_dic[m_key]=load_model(info.online_url)
-        ModelInfo.objects.filter(id=info.id).update(is_replace=0)
+        model_dic[m_key].predict(np.zeros((1, 100)))
+        path = DIR + m_key + '.h5'
+        if os.path.exists(path):
+            os.remove(path)
+        os.rename(info.online_url, DIR + m_key + '.h5')
+        info.update(online_url=DIR + m_key + '.h5', is_replace=0)
         print("load_model    appId="+str(info.app_id)+time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
     if not model_dic.has_key('word_index'):
         with open(DIR + 'word_index.pkl', 'rb') as vocab:
