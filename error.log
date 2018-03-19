@@ -1,0 +1,159 @@
+[Fri Mar 16 14:16:15.918045 2018] [core:error] [pid 390] (13)Permission denied: [client 123.122.11.82:58103] AH00035: access to /dl/predict denied (filesystem path '/home/bothelper/BotHelper') because search permissions are missing on a component of the path
+[Fri Mar 16 14:16:16.242344 2018] [core:error] [pid 390] (13)Permission denied: [client 123.122.11.82:58103] AH00035: access to /favicon.ico denied (filesystem path '/home/bothelper/BotHelper') because search permissions are missing on a component of the path, referer: http://182.92.222.75:82/dl/predict?appId=123&userQuestion=%E4%BB%B7%E6%A0%BC&useClass=0
+[Fri Mar 16 14:17:14.184075 2018] [:error] [pid 425] Invalid HTTP_HOST header: '182.92.222.75:82'. You may need to add u'182.92.222.75' to ALLOWED_HOSTS.
+[Fri Mar 16 14:17:14.959711 2018] [:error] [pid 425] Invalid HTTP_HOST header: '182.92.222.75:82'. You may need to add u'182.92.222.75' to ALLOWED_HOSTS.
+[Sat Mar 17 06:16:04.134197 2018] [:error] [pid 425] Invalid HTTP_HOST header: u'182.92.222.75:82'. You may need to add u'182.92.222.75' to ALLOWED_HOSTS.
+[Sun Mar 18 03:42:24.315510 2018] [:error] [pid 425] Invalid HTTP_HOST header: u'182.92.222.75:82'. You may need to add u'182.92.222.75' to ALLOWED_HOSTS.
+[Mon Mar 19 02:22:29.529396 2018] [:error] [pid 15858] Invalid HTTP_HOST header: '182.92.222.75:82'. You may need to add u'182.92.222.75' to ALLOWED_HOSTS.
+[Mon Mar 19 02:22:30.625306 2018] [:error] [pid 15858] Invalid HTTP_HOST header: '182.92.222.75:82'. You may need to add u'182.92.222.75' to ALLOWED_HOSTS.
+[Mon Mar 19 02:23:53.614649 2018] [:error] [pid 19800] Invalid HTTP_HOST header: '182.92.222.75:82'. You may need to add u'182.92.222.75' to ALLOWED_HOSTS.
+[Mon Mar 19 02:23:55.101163 2018] [:error] [pid 19800] Invalid HTTP_HOST header: '182.92.222.75:82'. You may need to add u'182.92.222.75' to ALLOWED_HOSTS.
+[Mon Mar 19 02:25:07.891686 2018] [:error] [pid 20474] Using TensorFlow backend.
+2018-03-19 02:25:17.930306: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-19 02:25:17.930346: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+[Mon Mar 19 02:25:46.390699 2018] [:error] [pid 20474] Internal Server Error: /dl/predict
+[Mon Mar 19 02:25:46.390757 2018] [:error] [pid 20474] Traceback (most recent call last):
+[Mon Mar 19 02:25:46.390769 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Mon Mar 19 02:25:46.390779 2018] [:error] [pid 20474]     response = get_response(request)
+[Mon Mar 19 02:25:46.390789 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/utils/deprecation.py", line 134, in __call__
+[Mon Mar 19 02:25:46.390799 2018] [:error] [pid 20474]     response = self.process_request(request)
+[Mon Mar 19 02:25:46.390809 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/middleware/common.py", line 62, in process_request
+[Mon Mar 19 02:25:46.390819 2018] [:error] [pid 20474]     if self.should_redirect_with_slash(request):
+[Mon Mar 19 02:25:46.390829 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/middleware/common.py", line 80, in should_redirect_with_slash
+[Mon Mar 19 02:25:46.390839 2018] [:error] [pid 20474]     not is_valid_path(request.path_info, urlconf) and
+[Mon Mar 19 02:25:46.390848 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/base.py", line 157, in is_valid_path
+[Mon Mar 19 02:25:46.390858 2018] [:error] [pid 20474]     resolve(path, urlconf)
+[Mon Mar 19 02:25:46.390868 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/base.py", line 27, in resolve
+[Mon Mar 19 02:25:46.390877 2018] [:error] [pid 20474]     return get_resolver(urlconf).resolve(path)
+[Mon Mar 19 02:25:46.390888 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 270, in resolve
+[Mon Mar 19 02:25:46.390917 2018] [:error] [pid 20474]     for pattern in self.url_patterns:
+[Mon Mar 19 02:25:46.390927 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Mon Mar 19 02:25:46.390961 2018] [:error] [pid 20474]     res = instance.__dict__[self.name] = self.func(instance)
+[Mon Mar 19 02:25:46.390976 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+[Mon Mar 19 02:25:46.390985 2018] [:error] [pid 20474]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Mon Mar 19 02:25:46.390995 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Mon Mar 19 02:25:46.391004 2018] [:error] [pid 20474]     res = instance.__dict__[self.name] = self.func(instance)
+[Mon Mar 19 02:25:46.391013 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+[Mon Mar 19 02:25:46.391023 2018] [:error] [pid 20474]     return import_module(self.urlconf_name)
+[Mon Mar 19 02:25:46.391032 2018] [:error] [pid 20474]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Mar 19 02:25:46.391041 2018] [:error] [pid 20474]     __import__(name)
+[Mon Mar 19 02:25:46.391051 2018] [:error] [pid 20474]   File "/home/bothelper/BotHelper/BotHelperOnline/BotHelperOnline/urls.py", line 19, in <module>
+[Mon Mar 19 02:25:46.391060 2018] [:error] [pid 20474]     url(r'^dl/', include('deeplearning.urls')),
+[Mon Mar 19 02:25:46.391069 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+[Mon Mar 19 02:25:46.391078 2018] [:error] [pid 20474]     urlconf_module = import_module(urlconf_module)
+[Mon Mar 19 02:25:46.391087 2018] [:error] [pid 20474]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Mar 19 02:25:46.391096 2018] [:error] [pid 20474]     __import__(name)
+[Mon Mar 19 02:25:46.391106 2018] [:error] [pid 20474]   File "/home/bothelper/BotHelper/BotHelperOnline/deeplearning/urls.py", line 2, in <module>
+[Mon Mar 19 02:25:46.391115 2018] [:error] [pid 20474]     import views
+[Mon Mar 19 02:25:46.391124 2018] [:error] [pid 20474]   File "/home/bothelper/BotHelper/BotHelperOnline/deeplearning/views.py", line 14, in <module>
+[Mon Mar 19 02:25:46.391133 2018] [:error] [pid 20474]     import pyemd
+[Mon Mar 19 02:25:46.391142 2018] [:error] [pid 20474] ImportError: No module named pyemd
+[Mon Mar 19 02:25:48.786822 2018] [:error] [pid 20474] Internal Server Error: /favicon.ico
+[Mon Mar 19 02:25:48.786869 2018] [:error] [pid 20474] Traceback (most recent call last):
+[Mon Mar 19 02:25:48.786880 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Mon Mar 19 02:25:48.786890 2018] [:error] [pid 20474]     response = get_response(request)
+[Mon Mar 19 02:25:48.786899 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/utils/deprecation.py", line 134, in __call__
+[Mon Mar 19 02:25:48.786909 2018] [:error] [pid 20474]     response = self.process_request(request)
+[Mon Mar 19 02:25:48.786918 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/middleware/common.py", line 62, in process_request
+[Mon Mar 19 02:25:48.786928 2018] [:error] [pid 20474]     if self.should_redirect_with_slash(request):
+[Mon Mar 19 02:25:48.786967 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/middleware/common.py", line 80, in should_redirect_with_slash
+[Mon Mar 19 02:25:48.786982 2018] [:error] [pid 20474]     not is_valid_path(request.path_info, urlconf) and
+[Mon Mar 19 02:25:48.786991 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/base.py", line 157, in is_valid_path
+[Mon Mar 19 02:25:48.787001 2018] [:error] [pid 20474]     resolve(path, urlconf)
+[Mon Mar 19 02:25:48.787024 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/base.py", line 27, in resolve
+[Mon Mar 19 02:25:48.787034 2018] [:error] [pid 20474]     return get_resolver(urlconf).resolve(path)
+[Mon Mar 19 02:25:48.787044 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 270, in resolve
+[Mon Mar 19 02:25:48.787053 2018] [:error] [pid 20474]     for pattern in self.url_patterns:
+[Mon Mar 19 02:25:48.787062 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Mon Mar 19 02:25:48.787071 2018] [:error] [pid 20474]     res = instance.__dict__[self.name] = self.func(instance)
+[Mon Mar 19 02:25:48.787081 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+[Mon Mar 19 02:25:48.787090 2018] [:error] [pid 20474]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Mon Mar 19 02:25:48.787099 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Mon Mar 19 02:25:48.787109 2018] [:error] [pid 20474]     res = instance.__dict__[self.name] = self.func(instance)
+[Mon Mar 19 02:25:48.787118 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+[Mon Mar 19 02:25:48.787127 2018] [:error] [pid 20474]     return import_module(self.urlconf_name)
+[Mon Mar 19 02:25:48.787136 2018] [:error] [pid 20474]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Mar 19 02:25:48.787146 2018] [:error] [pid 20474]     __import__(name)
+[Mon Mar 19 02:25:48.787155 2018] [:error] [pid 20474]   File "/home/bothelper/BotHelper/BotHelperOnline/BotHelperOnline/urls.py", line 19, in <module>
+[Mon Mar 19 02:25:48.787164 2018] [:error] [pid 20474]     url(r'^dl/', include('deeplearning.urls')),
+[Mon Mar 19 02:25:48.787173 2018] [:error] [pid 20474]   File "/usr/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+[Mon Mar 19 02:25:48.787182 2018] [:error] [pid 20474]     urlconf_module = import_module(urlconf_module)
+[Mon Mar 19 02:25:48.787191 2018] [:error] [pid 20474]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Mar 19 02:25:48.787201 2018] [:error] [pid 20474]     __import__(name)
+[Mon Mar 19 02:25:48.787210 2018] [:error] [pid 20474]   File "/home/bothelper/BotHelper/BotHelperOnline/deeplearning/urls.py", line 2, in <module>
+[Mon Mar 19 02:25:48.787219 2018] [:error] [pid 20474]     import views
+[Mon Mar 19 02:25:48.787228 2018] [:error] [pid 20474]   File "/home/bothelper/BotHelper/BotHelperOnline/deeplearning/views.py", line 14, in <module>
+[Mon Mar 19 02:25:48.787237 2018] [:error] [pid 20474]     import pyemd
+[Mon Mar 19 02:25:48.787246 2018] [:error] [pid 20474] ImportError: No module named pyemd
+[Mon Mar 19 02:27:53.490785 2018] [:error] [pid 21838] Using TensorFlow backend.
+2018-03-19 02:27:57.780813: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-19 02:27:57.780871: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+[Mon Mar 19 02:28:04.165248 2018] [:error] [pid 21838] Building prefix dict from the default dictionary ...
+[Mon Mar 19 02:28:06.984919 2018] [:error] [pid 21838] Dumping model to file cache /tmp/jieba.cache
+[Mon Mar 19 02:28:07.295225 2018] [:error] [pid 21838] Loading model cost 3.130 seconds.
+[Mon Mar 19 02:28:07.295353 2018] [:error] [pid 21838] Prefix dict has been built succesfully.
+[Mon Mar 19 02:28:08.507542 2018] [:error] [pid 21838] Not Found: /favicon.ico
+[Mon Mar 19 02:43:51.898865 2018] [:error] [pid 28462] Using TensorFlow backend.
+2018-03-19 02:43:56.102822: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-19 02:43:56.102884: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+[Mon Mar 19 02:44:02.334672 2018] [:error] [pid 28462] Building prefix dict from the default dictionary ...
+[Mon Mar 19 02:44:05.093514 2018] [:error] [pid 28462] Dumping model to file cache /tmp/jieba.cache
+[Mon Mar 19 02:44:05.397357 2018] [:error] [pid 28462] Loading model cost 3.062 seconds.
+[Mon Mar 19 02:44:05.397478 2018] [:error] [pid 28462] Prefix dict has been built succesfully.
+[Mon Mar 19 02:54:29.121322 2018] [:error] [pid 30799] Using TensorFlow backend.
+2018-03-19 02:54:33.408089: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-19 02:54:33.421093: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+[Mon Mar 19 02:54:39.629644 2018] [:error] [pid 30799] Not Found: /
+[Mon Mar 19 03:54:37.433487 2018] [:error] [pid 26651] Using TensorFlow backend.
+[Mon Mar 19 03:54:40.006558 2018] [:error] [pid 26651] /usr/lib64/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[Mon Mar 19 03:54:40.006611 2018] [:error] [pid 26651]   from ._conv import register_converters as _register_converters
+2018-03-19 03:54:42.140703: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-19 03:54:42.140770: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+[Mon Mar 19 03:54:48.447441 2018] [:error] [pid 26651] Building prefix dict from the default dictionary ...
+[Mon Mar 19 03:54:51.210801 2018] [:error] [pid 26651] Dumping model to file cache /tmp/jieba.cache
+[Mon Mar 19 03:54:51.542145 2018] [:error] [pid 26651] Loading model cost 3.094 seconds.
+[Mon Mar 19 03:54:51.542284 2018] [:error] [pid 26651] Prefix dict has been built succesfully.
+[Mon Mar 19 06:14:49.846807 2018] [:error] [pid 24908] Using TensorFlow backend.
+[Mon Mar 19 06:14:52.415591 2018] [:error] [pid 24908] /usr/lib64/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[Mon Mar 19 06:14:52.415644 2018] [:error] [pid 24908]   from ._conv import register_converters as _register_converters
+2018-03-19 06:14:54.243734: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-19 06:14:54.243790: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+[Mon Mar 19 06:14:56.815805 2018] [:error] [pid 24908] Internal Server Error: /moo
+[Mon Mar 19 06:14:56.815855 2018] [:error] [pid 24908] Traceback (most recent call last):
+[Mon Mar 19 06:14:56.815866 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+[Mon Mar 19 06:14:56.815876 2018] [:error] [pid 24908]     response = get_response(request)
+[Mon Mar 19 06:14:56.815902 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/utils/deprecation.py", line 134, in __call__
+[Mon Mar 19 06:14:56.815912 2018] [:error] [pid 24908]     response = self.process_request(request)
+[Mon Mar 19 06:14:56.815921 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/middleware/common.py", line 62, in process_request
+[Mon Mar 19 06:14:56.815931 2018] [:error] [pid 24908]     if self.should_redirect_with_slash(request):
+[Mon Mar 19 06:14:56.815970 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/middleware/common.py", line 80, in should_redirect_with_slash
+[Mon Mar 19 06:14:56.815982 2018] [:error] [pid 24908]     not is_valid_path(request.path_info, urlconf) and
+[Mon Mar 19 06:14:56.815992 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/urls/base.py", line 157, in is_valid_path
+[Mon Mar 19 06:14:56.816001 2018] [:error] [pid 24908]     resolve(path, urlconf)
+[Mon Mar 19 06:14:56.816011 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/urls/base.py", line 27, in resolve
+[Mon Mar 19 06:14:56.816020 2018] [:error] [pid 24908]     return get_resolver(urlconf).resolve(path)
+[Mon Mar 19 06:14:56.816029 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 270, in resolve
+[Mon Mar 19 06:14:56.816038 2018] [:error] [pid 24908]     for pattern in self.url_patterns:
+[Mon Mar 19 06:14:56.816048 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Mon Mar 19 06:14:56.816057 2018] [:error] [pid 24908]     res = instance.__dict__[self.name] = self.func(instance)
+[Mon Mar 19 06:14:56.816066 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+[Mon Mar 19 06:14:56.816075 2018] [:error] [pid 24908]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Mon Mar 19 06:14:56.816085 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+[Mon Mar 19 06:14:56.816094 2018] [:error] [pid 24908]     res = instance.__dict__[self.name] = self.func(instance)
+[Mon Mar 19 06:14:56.816103 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+[Mon Mar 19 06:14:56.816112 2018] [:error] [pid 24908]     return import_module(self.urlconf_name)
+[Mon Mar 19 06:14:56.816121 2018] [:error] [pid 24908]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Mar 19 06:14:56.816130 2018] [:error] [pid 24908]     __import__(name)
+[Mon Mar 19 06:14:56.816139 2018] [:error] [pid 24908]   File "/home/bothelper/BotHelper/BotHelperOnline/BotHelperOnline/urls.py", line 19, in <module>
+[Mon Mar 19 06:14:56.816148 2018] [:error] [pid 24908]     url(r'^dl/', include('deeplearning.urls')),
+[Mon Mar 19 06:14:56.816157 2018] [:error] [pid 24908]   File "/usr/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+[Mon Mar 19 06:14:56.816166 2018] [:error] [pid 24908]     urlconf_module = import_module(urlconf_module)
+[Mon Mar 19 06:14:56.816175 2018] [:error] [pid 24908]   File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+[Mon Mar 19 06:14:56.816184 2018] [:error] [pid 24908]     __import__(name)
+[Mon Mar 19 06:14:56.816193 2018] [:error] [pid 24908]   File "/home/bothelper/BotHelper/BotHelperOnline/deeplearning/urls.py", line 2, in <module>
+[Mon Mar 19 06:14:56.816202 2018] [:error] [pid 24908]     import views
+[Mon Mar 19 06:14:56.816211 2018] [:error] [pid 24908]   File "/home/bothelper/BotHelper/BotHelperOnline/deeplearning/views.py", line 12, in <module>
+[Mon Mar 19 06:14:56.816220 2018] [:error] [pid 24908]     from load_model import model_dic
+[Mon Mar 19 06:14:56.816229 2018] [:error] [pid 24908]   File "/home/bothelper/BotHelper/BotHelperOnline/deeplearning/load_model.py", line 21, in <module>
+[Mon Mar 19 06:14:56.816246 2018] [:error] [pid 24908]     info.update(online_url='DIR+m_key'+'.h5',is_replace=1)
+[Mon Mar 19 06:14:56.816256 2018] [:error] [pid 24908] AttributeError: 'ModelInfo' object has no attribute 'update'
