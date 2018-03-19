@@ -21,7 +21,9 @@ for info in online_models:
     if os.path.exists(path):
         os.remove(path)
     os.rename(info.online_url,path)
-    info.update(online_url=path,is_replace=0)
+    info.online_url=path
+    info.is_replace=0
+    info.save()
 
 with open(DIR+'word_index.pkl', 'rb') as vocab:
     model_dic['word_index'] = pickle.load(vocab)
